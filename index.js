@@ -3,7 +3,11 @@ img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18
 img.onload = () => {init()}
 let canvas = document.querySelector('canvas')
 let ctx= canvas.getContext('2d')
-
+const scale = 2
+const width = 16
+const height = 18
+const scaledWidth = width* scale
+const scaledHeight = height * scale
 function init(){
-    ctx.drawImage(img,0,0,16,18,0,0,16,18)
+    ctx.drawImage(img,0,0,width,height,0,0,scaledWidth,18*scaledHeight)
 }
