@@ -9,5 +9,7 @@ const height = 18
 const scaledWidth = width* scale
 const scaledHeight = height * scale
 function init(){
-    ctx.drawImage(img,0,0,width,height,0,0,scaledWidth,18*scaledHeight)
+    ctx.drawImage(img, 0, 0, width, height, 0, 0, scaledWidth, scaledHeight);
+  ctx.drawImage(img, width, 0, width, height, scaledWidth, 0, scaledWidth, scaledHeight);
+  ctx.drawImage(img, width * 2, 0, width, height, scaledWidth * 2, 0, scaledWidth, scaledHeight);
 }
