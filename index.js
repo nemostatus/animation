@@ -27,8 +27,15 @@ window.requestAnimationFrame(step);
 
 const cycleLoop= [0,1,0,2]
 let currentLoopIndex = 0
+let frameCount = 0;
 
 function step(){
+    frameCount++;
+    if(frameCount<15){
+        window.requestAnimationFrame(step);
+        return;
+    }
+    frameCount=0
     ctx.clearRect(0,0,canvas.width,canvas.height)
     drawFrame(cycleLoop[currentLoopIndex], 0, 0, 0)
     currentLoopIndex++
